@@ -1,55 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academia de natación: Los manatíes</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+    <title>Para Valeria 💖</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe6f2;
+            text-align: center;
+            padding: 50px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            max-width: 500px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        h1 {
+            color: #ff4d6d;
+        }
+        .heart {
+            color: red;
+            font-size: 50px;
+            animation: heartbeat 1.5s infinite;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        .btn {
+            background-color: #ff4d6d;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background-color: #e63950;
+        }
+        .image-container {
+            margin-top: 20px;
+        }
+        .image-container img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <header id="header" class="grid grid-cols-10 container mx-auto mb-4">
-        <!-- logo -->
-        <div class="col-span-3">
-            <a href="/"><img src="img/logo.svg" alt="Logo de EDteam" class="logo"></a>
+    <div class="card">
+        <h1>Para Valeria 💖</h1>
+        <p>Eres el amor de mi vida y mi felicidad infinita. Gracias por estar siempre a mi lado. 💕</p>
+        <p id="heart" class="heart">❤️</p>
+        <p><strong>De parte de Anibal</strong></p>
+        <button class="btn" onclick="mostrarSorpresa()">Haz clic aquí</button>
+        <p id="sorpresa" style="display:none; margin-top:20px; font-size:18px; color:#e63950;"><strong>¡Te amo más de lo que las palabras pueden expresar! 💘</strong></p>
+        <div class="image-container">
+            <img id="imagenSorpresa" src="img/nosotros.jpg" alt="Nosotros">
         </div>
-        <!-- menu -->
-        <div class="col-span-7">
-            <nav class="flex justify-end menu">
-                <ul class="flex">
-                    <li><a href="/" class="selected">Inicio</a></li>
-                    <li><a href="servicios.html">Nuestros servicios</a></li>
-                    <li><a href="clientes.html">Nuestros clientes</a></li>
-                    <li><a href="contacto.html">Contáctenos</a></li>
-                </ul>
-            </nav>
-        </div>
-        <!-- menu -->
-    </header>
-    <div id="banner" class="container mx-auto mb-8">
-        <img src="img/natacion.webp" alt="">
     </div>
-    <div class="container mx-auto grid grid-cols-4 gap-8 mb-8">
-        <main id="main" class="col-span-3">
-            <h1 class="title">Academia de natación Los manaties</h1>
-            <p>"¡Hola mamás! En nuestra Academia de Natación, los niños y adolescentes disfrutan de cursos durante todo el año, no solo en verano. Con profesores expertos y estudiantes que son campeones de natación, garantizamos diversión y aprendizaje de calidad. ¡Inscribe a tus pequeños y mira cómo se convierten en estrellas del agua!"
-            </p>
-        </main>
-        <aside>
-            <h2 class="subtitle">Siguenos en redes</h2>
-            <div class="flex social">
-                <a href="https://facebook.com"><img src="img/facebook.png" alt=""></a>
-                <a href="https://tiktok.com"><img src="img/tiktok.png" alt=""></a>
-                <a href="https://instagram.com"><img src="img/instagram.png" alt=""></a>
-                <a href="https://linkedin.com"><img src="img/linkedin.png" alt=""></a>
-            </div>
-        </aside>
-    </div>
-    
-    <footer id="footer">
-        <p>Academia de natación Los Manaties <br>
-         Lima, Perú | Contacto: 987654321
-        </p>
-    </footer>
+
+    <script>
+        function mostrarSorpresa() {
+            document.getElementById('sorpresa').style.display = 'block';
+            document.getElementById('heart').style.display = 'none';
+            document.getElementById('imagenSorpresa').style.display = 'block';
+        }
+    </script>
 </body>
 </html>
