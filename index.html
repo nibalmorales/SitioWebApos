@@ -60,6 +60,16 @@
             display: none;
         }
     </style>
+    <script>
+  function login() {
+    var password = prompt("Ingrese la clave:");
+    if (password !== "miClave123") {
+      alert("Acceso denegado");
+      window.location.href = "https://www.google.com";
+    }
+  }
+  window.onload = login;
+</script>
 </head>
 <body>
     <div class="card">
